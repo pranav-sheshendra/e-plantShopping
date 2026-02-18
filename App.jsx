@@ -3,24 +3,20 @@ import ProductList from "./ProductList";
 import "./App.css";
 
 function App() {
-  const [start, setStart] = useState(false);
+  const [showProductList, setShowProductList] = useState(false);
 
-  if (start) {
+  if (showProductList) {
     return <ProductList />;
   }
 
   return (
     <div style={{ textAlign: "center", paddingTop: "150px" }}>
       <h1>Paradise Nursery</h1>
-      <p>Welcome to your one stop plant shop</p>
+      <p>Your one stop plant shopping destination</p>
 
       <button
-        onClick={() => setStart(true)}
-        style={{
-          padding: "12px 20px",
-          fontSize: "18px",
-          cursor: "pointer"
-        }}
+        onClick={() => setShowProductList(true)}
+        style={{ padding: "12px 20px", fontSize: "18px" }}
       >
         Get Started
       </button>
