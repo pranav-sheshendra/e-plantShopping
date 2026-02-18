@@ -29,9 +29,11 @@ function CartItem() {
 
           <button onClick={() => decreaseQty(item)}>-</button>
           <span>{item.quantity}</span>
-          <button onClick={() =>
-            dispatch(updateQuantity({ id: item.id, quantity: item.quantity + 1 }))
-          }>
+          <button
+            onClick={() =>
+              dispatch(updateQuantity({ id: item.id, quantity: item.quantity + 1 }))
+            }
+          >
             +
           </button>
 
